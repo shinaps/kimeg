@@ -21,25 +21,25 @@ export default function Home() {
   }, [])
 
   const handleSubmit = async () => {
-    handlers.open()
-    const res = await fetch('/api/openai/create-message', {
-      method: 'POST',
-      // @ts-ignore
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text: text,
-      }),
-    })
-
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
+    try {
+      handlers.open()
+      const res = await fetch('/api/openai/create-message', {
+        method: 'POST',
+        // @ts-ignore
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          text: text,
+        }),
+      })
+      const message = await res.json()
+      setResponse(message)
+      handlers.close()
+    } catch (err) {
+      setResponse('Zzz...')
+      handlers.close()
     }
-
-    const message = await res.json()
-    setResponse(message)
-    handlers.close()
   }
 
   return (
