@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const setPlaceholderMessage = async () => {
-      const res = await fetch('/api/openai/get-placeholder', { next: { revalidate: 3600 } })
+      const res = await fetch('/api/openai/get-placeholder')
       const message = await res.json()
       setResponse(message)
     }

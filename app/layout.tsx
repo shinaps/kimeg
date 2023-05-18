@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 
 const siteName = '決め爺'
 const description = 'あなたの代わりに爺さんが決めてくれます'
-const url = 'https://kimeg.vercel.app/'
+const url = 'https://kimeg.xyz/'
 
 export const metadata: Metadata = {
   title: {

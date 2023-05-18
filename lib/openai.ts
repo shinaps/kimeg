@@ -14,6 +14,7 @@ export const post = async (messages: Prompt) => {
       model: 'gpt-3.5-turbo',
       messages: messages,
     }),
+    next: { revalidate: 3600 },
   })
 
   const responseJson = await res.json()
