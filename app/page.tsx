@@ -104,7 +104,7 @@ export default function Home() {
           )}
         </div>
       </Flex>
-      <Text className={`mx-auto mt-32 text-center text-neutral-400`} fz='xs'>
+      <Text className={`mx-auto mb-6 mt-32 text-center text-neutral-400`} fz='xs'>
         <a
           href={`https://twitter.com/sh1n4ps`}
           target='_blank'
