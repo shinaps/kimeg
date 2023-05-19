@@ -104,6 +104,16 @@ export default function Home() {
           )}
         </div>
       </Flex>
+      <Text className={`mx-auto mt-32 text-center text-neutral-400`} fz='xs'>
+        <a
+          href={`https://twitter.com/sh1n4ps`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className={`text-neutral-400 no-underline`}
+        >
+          © 2023 shinaps
+        </a>
+      </Text>
     </>
   )
 }
