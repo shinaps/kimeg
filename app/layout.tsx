@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import React from 'react'
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 const siteName = '決め爺'
 const description = 'あなたの代わりに爺さんが決めてくれます'
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ja'>
       <body className={`mx-auto max-w-screen-sm`}>{children}</body>
+      <Analytics />
     </html>
   )
 }
